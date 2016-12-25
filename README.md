@@ -1,13 +1,15 @@
-# concurrent-histogram
+concurrent-histogram
+Name: concurrent-histogram
+Author: Taylan Dogan
+License: The MIT License (MIT)
+Requirements:Java 1.8, JUnit, Ant
+Description:
 Concurrently builds a histogram out of given intervals and values.
 
-Build the project: ant -buildfile build.xml
-Then run the main class: java -jar HistogramBuilder.jar
+In resources folder, you may find the test files I have used. For each file in the folder, I initialize a new Thread instance and proceed with building the histogram.
+You may edit these files (or add new files) to resources for further testing.
 
-In 'resources' folder, you may find the test files I have used. For each file in the folder, I initialize a new Thread instance and proceed with building the histogram.
-You may edit these files (or add new files) to 'resources' folder for further testing.
-
-However, for the consistency and correctness of unit tests, you should not alter the file 'test_histogram.txt'.
+However, for the consistency and correctness of unit tests, you should not alter the file test_histogam.txt
 
 Example: Given the intervals and values:
 [3, 4.1)
@@ -33,4 +35,10 @@ sample variance: 422.243
 
 outliers: 8.1, 8.2, 30, 41.27
 
-TODO: Ant cannot find junit.jar. Fix ant test target.
+How to Use:
+
+Build the project: ant -buildfile build.xml
+Then run the main class: java -jar HistogramBuilder.jar
+To Do:
+
+Ant cannot find junit.jar. Fix ant test target.
